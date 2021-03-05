@@ -11,6 +11,11 @@
 		F70A7BAD25F28A9E00D2FCFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BAC25F28A9E00D2FCFE /* ContentView.swift */; };
 		F70A7BAF25F28A9F00D2FCFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70A7BAE25F28A9F00D2FCFE /* Assets.xcassets */; };
 		F70A7BB225F28A9F00D2FCFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70A7BB125F28A9F00D2FCFE /* Preview Assets.xcassets */; };
+		F70A7BBD25F28AF800D2FCFE /* FruitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BBC25F28AF800D2FCFE /* FruitsListView.swift */; };
+		F70A7BC125F28B0000D2FCFE /* FruitsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BC025F28B0000D2FCFE /* FruitsListViewModel.swift */; };
+		F70A7BC525F28CE200D2FCFE /* FruitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BC425F28CE200D2FCFE /* FruitDetailViewModel.swift */; };
+		F70A7BC925F28CF600D2FCFE /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BC825F28CF600D2FCFE /* FruitDetailView.swift */; };
+		F70A7BCE25F28DFF00D2FCFE /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A7BCD25F28DFF00D2FCFE /* Fruit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		F70A7BAE25F28A9F00D2FCFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F70A7BB125F28A9F00D2FCFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F70A7BB325F28A9F00D2FCFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70A7BBC25F28AF800D2FCFE /* FruitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListView.swift; sourceTree = "<group>"; };
+		F70A7BC025F28B0000D2FCFE /* FruitsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListViewModel.swift; sourceTree = "<group>"; };
+		F70A7BC425F28CE200D2FCFE /* FruitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailViewModel.swift; sourceTree = "<group>"; };
+		F70A7BC825F28CF600D2FCFE /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
+		F70A7BCD25F28DFF00D2FCFE /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 		F70A7BA925F28A9E00D2FCFE /* FruitsUI */ = {
 			isa = PBXGroup;
 			children = (
+				F70A7BCC25F28DF100D2FCFE /* Model */,
+				F70A7BBA25F28AD800D2FCFE /* Screens */,
 				F70A7BAA25F28A9E00D2FCFE /* FruitsUIApp.swift */,
 				F70A7BAC25F28A9E00D2FCFE /* ContentView.swift */,
 				F70A7BAE25F28A9F00D2FCFE /* Assets.xcassets */,
@@ -67,6 +79,41 @@
 				F70A7BB125F28A9F00D2FCFE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F70A7BBA25F28AD800D2FCFE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7BC325F28CC300D2FCFE /* FruitDetail */,
+				F70A7BBB25F28AE100D2FCFE /* FruitsList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F70A7BBB25F28AE100D2FCFE /* FruitsList */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7BBC25F28AF800D2FCFE /* FruitsListView.swift */,
+				F70A7BC025F28B0000D2FCFE /* FruitsListViewModel.swift */,
+			);
+			path = FruitsList;
+			sourceTree = "<group>";
+		};
+		F70A7BC325F28CC300D2FCFE /* FruitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7BC425F28CE200D2FCFE /* FruitDetailViewModel.swift */,
+				F70A7BC825F28CF600D2FCFE /* FruitDetailView.swift */,
+			);
+			path = FruitDetail;
+			sourceTree = "<group>";
+		};
+		F70A7BCC25F28DF100D2FCFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F70A7BCD25F28DFF00D2FCFE /* Fruit.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F70A7BAD25F28A9E00D2FCFE /* ContentView.swift in Sources */,
+				F70A7BC525F28CE200D2FCFE /* FruitDetailViewModel.swift in Sources */,
+				F70A7BC125F28B0000D2FCFE /* FruitsListViewModel.swift in Sources */,
 				F70A7BAB25F28A9E00D2FCFE /* FruitsUIApp.swift in Sources */,
+				F70A7BCE25F28DFF00D2FCFE /* Fruit.swift in Sources */,
+				F70A7BC925F28CF600D2FCFE /* FruitDetailView.swift in Sources */,
+				F70A7BBD25F28AF800D2FCFE /* FruitsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
