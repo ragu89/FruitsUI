@@ -11,8 +11,8 @@ struct Fruit: Hashable {
     
     let name: String
     let description: String
+    let imagerUrl: String
     let details: String? = nil
-    let imagerUrl: String? = nil
     let hexColorTint: String? = nil
 
     static func == (a: Fruit, b: Fruit) -> Bool {

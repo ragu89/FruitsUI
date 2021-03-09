@@ -51,9 +51,21 @@ struct FruitsListCellView: View {
     var body: some View {
         
         HStack(alignment: .center, spacing: 15) {
-            Image.init(systemName: "star")
+            
+            AsyncImage(
+                url: URL(string: fruit.imagerUrl)!,
+                placeholder: { ProgressView() },
+                image: {
+                    Image.init(uiImage: $0)
+                        .resizable()
+                    
+                }
+            ).frame(maxWidth: 29, maxHeight: 29)
+            
             Text(fruit.name)
+            
             Spacer()
+            
         }
         
     }
@@ -67,15 +79,18 @@ struct FruitsListView_Previews: PreviewProvider {
                 fruits: [
                     Fruit(
                         name: "Apple",
-                        description: "This is an apple"
+                        description: "This is an apple",
+                        imagerUrl: "http://"
                     ),
                     Fruit(
                         name: "Banana",
-                        description: "This is a banana"
+                        description: "This is a banana",
+                        imagerUrl: "http://"
                     ),
                     Fruit(
                         name: "Orange",
-                        description: "This is an Orange"
+                        description: "This is an Orange",
+                        imagerUrl: "http://"
                     )
                 ]
             )

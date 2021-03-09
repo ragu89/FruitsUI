@@ -42,7 +42,8 @@ struct FruitDetailView_Previews: PreviewProvider {
             viewModel: FruitDetailViewModel(
                 fruit: Fruit(
                     name: "Apple",
-                    description: "This is a green apple."
+                    description: "This is a green apple.",
+                    imagerUrl: "http://"
                 )
             )
         )
