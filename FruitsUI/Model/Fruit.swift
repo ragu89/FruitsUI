@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct Fruit {
+struct Fruit: Hashable {
     
     let name: String
     let description: String
     let details: String? = nil
     let imagerUrl: String? = nil
     let hexColorTint: String? = nil
+
+    static func == (a: Fruit, b: Fruit) -> Bool {
+        return a.name == b.name && a.description == b.description
+    }
     
 }

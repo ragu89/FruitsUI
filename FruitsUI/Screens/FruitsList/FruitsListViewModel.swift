@@ -9,4 +9,10 @@ import Foundation
 
 struct FruitsListViewModel {
     
+    let fruits: [Fruit]
+    
+    init(fruits: [Fruit]) {
+        self.fruits = fruits
+    }
+    
 }
