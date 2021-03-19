@@ -31,45 +31,17 @@ struct FruitsListView: View {
                             )
                         ),
                         label: {
-                            FruitsListCellView(fruit)
+                            FruitsListCellView(
+                                viewModel: FruitsListCellViewModel(
+                                    fruit: fruit
+                                )
+                            )
                         }
                     )
                 }
             }
         }
     }
-}
-
-struct FruitsListCellView: View {
-    
-    let fruit: Fruit
-    
-    init(_ fruit: Fruit) {
-        self.fruit = fruit
-    }
-    
-    var body: some View {
-        
-        HStack(alignment: .center, spacing: 15) {
-            
-            AsyncImage(
-                url: URL(string: fruit.imagerUrl)!,
-                placeholder: { ProgressView() },
-                image: {
-                    Image.init(uiImage: $0)
-                        .resizable()
-                    
-                }
-            ).frame(maxWidth: 29, maxHeight: 29)
-            
-            Text(fruit.name)
-            
-            Spacer()
-            
-        }
-        
-    }
-    
 }
 
 struct FruitsListView_Previews: PreviewProvider {
