@@ -17,7 +17,6 @@ struct FruitDetailView: View {
     
     var body: some View {
         content
-            .padding()
             .frame(
                 minWidth: 0,
                 maxWidth: .infinity,
@@ -25,13 +24,32 @@ struct FruitDetailView: View {
                 maxHeight: .infinity,
                 alignment: .topLeading
             )
+            .navigationBarTitleDisplayMode(.inline)
     }
     
     var content: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text(viewModel.fruit.name)
-                .font(.title)
-            Text(viewModel.fruit.description)
+        VStack(alignment: .leading) {
+            
+            AsyncImage(
+                url: URL(string: viewModel.fruit.imagerUrl)!,
+                placeholder: {
+                    ProgressView()
+                },
+                image: {
+                    Image.init(uiImage: $0)
+                        .resizable()
+                })
+                .aspectRatio(contentMode: .fit)
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: 200
+                )
+            
+            VStack(alignment: .leading, spacing: 20) {
+                Text(viewModel.fruit.name)
+                    .font(.title)
+                Text(viewModel.fruit.description)
+            }.padding()
         }
     }
 }
