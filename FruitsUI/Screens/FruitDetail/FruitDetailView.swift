@@ -30,26 +30,37 @@ struct FruitDetailView: View {
     var content: some View {
         VStack(alignment: .leading) {
             
-            AsyncImage(
-                url: URL(string: viewModel.fruit.imagerUrl)!,
-                placeholder: {
-                    ProgressView()
-                },
-                image: {
-                    Image.init(uiImage: $0)
-                        .resizable()
-                })
-                .aspectRatio(contentMode: .fit)
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: 200
-                )
+            HStack {
+                Spacer()
+            
+                AsyncImage(
+                    url: URL(string: viewModel.fruit.imagerUrl)!,
+                    placeholder: {
+                        ProgressView()
+                    },
+                    image: {
+                        Image.init(uiImage: $0)
+                            .resizable()
+                    })
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        maxWidth: 250,
+                        maxHeight: 250
+                    )
+                    .padding(.top, 75)
+                    .padding(.bottom)
+                
+                Spacer()
+            }
+            .background(Color.blue)
+            .edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .leading, spacing: 20) {
                 Text(viewModel.fruit.name)
                     .font(.title)
                 Text(viewModel.fruit.description)
             }.padding()
+            
         }
     }
 }

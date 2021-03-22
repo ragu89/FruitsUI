@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    /// Reference to customize the NavigationBar:
+    /// https://medium.com/@francisco.gindre/customizing-swiftui-navigation-bar-8369d42b8805
+    init() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        
+        UINavigationBar.appearance().tintColor = .white
+    }
+    
     var body: some View {
         NavigationView {
             FruitsListView(
