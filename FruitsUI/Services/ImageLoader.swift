@@ -14,11 +14,13 @@ class ImageLoader: ObservableObject {
     
     @Published var image: UIImage?
     private let url: URL
+    private let completion: (() -> Void)?
     private var cancellables = Set<AnyCancellable>()
     private static let imageProcessingQueue = DispatchQueue(label: "image-processing")
     
-    init(url: URL) {
+    init(url: URL, completion: (() -> Void)? = nil) {
         self.url = url
+        self.completion = completion
     }
     
     deinit {
@@ -33,6 +35,7 @@ class ImageLoader: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink {
                 self.image = $0
+                self.completion?()
             }
             .store(in: &cancellables)
     }

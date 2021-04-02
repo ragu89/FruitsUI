@@ -45,7 +45,9 @@ struct FruitsListCellView_Previews: PreviewProvider {
                 fruit: Fruit(
                     name: "Apple",
                     description: "This is an apple",
-                    imagerUrl: "https://"
+                    imagerUrl: "https://",
+                    primaryColorHex: "FF0000",
+                    primaryDarkColorHex: "0000FF"
                 )
             )
         )

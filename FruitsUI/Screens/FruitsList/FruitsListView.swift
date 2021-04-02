@@ -52,17 +52,23 @@ struct FruitsListView_Previews: PreviewProvider {
                     Fruit(
                         name: "Apple",
                         description: "This is an apple",
-                        imagerUrl: "http://"
+                        imagerUrl: "http://",
+                        primaryColorHex: "FF0000",
+                        primaryDarkColorHex: "0000FF"
                     ),
                     Fruit(
                         name: "Banana",
                         description: "This is a banana",
-                        imagerUrl: "http://"
+                        imagerUrl: "http://",
+                        primaryColorHex: "FF0000",
+                        primaryDarkColorHex: "0000FF"
                     ),
                     Fruit(
                         name: "Orange",
                         description: "This is an Orange",
-                        imagerUrl: "http://"
+                        imagerUrl: "http://",
+                        primaryColorHex: "FF0000",
+                        primaryDarkColorHex: "0000FF"
                     )
                 ]
             )

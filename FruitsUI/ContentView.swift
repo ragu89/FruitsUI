@@ -35,17 +35,23 @@ struct ContentView: View {
         Fruit(
             name: "Apple",
             description: "This is an apple",
-            imagerUrl: "https://i.ibb.co/3RHNfhF/apple.png"
+            imagerUrl: "https://i.ibb.co/3RHNfhF/apple.png",
+            primaryColorHex: "cd0c1b",
+            primaryDarkColorHex: "820711"
         ),
         Fruit(
             name: "Banana",
             description: "This is a banana",
-            imagerUrl: "https://i.ibb.co/n8x85TN/banana.png"
+            imagerUrl: "https://i.ibb.co/n8x85TN/banana.png",
+            primaryColorHex: "f6cd2c",
+            primaryDarkColorHex: "a3881c"
         ),
         Fruit(
             name: "Orange",
             description: "This is an Orange",
-            imagerUrl: "https://i.ibb.co/YQZ7s6z/orange.png"
+            imagerUrl: "https://i.ibb.co/YQZ7s6z/orange.png",
+            primaryColorHex: "f39a01",
+            primaryDarkColorHex: "b67300"
         )
     ]
 }
